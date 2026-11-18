@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>GestionVentas</RootNamespace>
+    <AssemblyName>GestionVentas</AssemblyName>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Mismas versiones que el proyecto de ejemplo y TecnoFix -->
+    <PackageReference Include="PDFsharp-MigraDoc-GDI" Version="1.50.5147" />
+    <PackageReference Include="RepoDb" Version="1.17.1" />
+    <PackageReference Include="RepoDb.SqlServer" Version="1.17.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.2" />
+  </ItemGroup>
+
+</Project>
