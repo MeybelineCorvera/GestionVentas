@@ -24,30 +24,29 @@ namespace GestionVentas.Formularios
             this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.SuspendLayout();
-            //
+            // 
             // lblTitulo
-            //
+            // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.Location = new System.Drawing.Point(20, 15);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(60, 17);
+            this.lblTitulo.Size = new System.Drawing.Size(202, 29);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Detalle de venta";
-            //
+            // 
             // lblInfo
-            //
+            // 
             this.lblInfo.AutoSize = true;
             this.lblInfo.Location = new System.Drawing.Point(20, 55);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(60, 17);
+            this.lblInfo.Size = new System.Drawing.Size(0, 16);
             this.lblInfo.TabIndex = 1;
-            this.lblInfo.Text = "";
-            //
+            // 
             // dgvDetalle
-            //
-            this.dgvDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this.dgvDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalle.Location = new System.Drawing.Point(20, 110);
@@ -56,32 +55,36 @@ namespace GestionVentas.Formularios
             this.dgvDetalle.RowTemplate.Height = 24;
             this.dgvDetalle.Size = new System.Drawing.Size(590, 250);
             this.dgvDetalle.TabIndex = 2;
-            //
+            // 
             // lblTotal
-            //
+            // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblTotal.Location = new System.Drawing.Point(20, 378);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(60, 17);
+            this.lblTotal.Size = new System.Drawing.Size(150, 29);
             this.lblTotal.TabIndex = 3;
             this.lblTotal.Text = "Total: $0.00";
-            //
+            // 
             // btnCerrar
-            //
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Location = new System.Drawing.Point(510, 372);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(100, 34);
             this.btnCerrar.TabIndex = 4;
             this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            //
+            // 
             // frmDetalleVenta
-            //
+            // 
             this.AcceptButton = this.btnCerrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Azure;
             this.CancelButton = this.btnCerrar;
             this.ClientSize = new System.Drawing.Size(640, 440);
             this.Controls.Add(this.lblTitulo);
@@ -99,6 +102,7 @@ namespace GestionVentas.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

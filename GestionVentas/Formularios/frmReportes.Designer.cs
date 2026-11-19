@@ -42,9 +42,10 @@ namespace GestionVentas.Formularios
             // lblReporte
             // 
             this.lblReporte.AutoSize = true;
+            this.lblReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReporte.Location = new System.Drawing.Point(20, 63);
             this.lblReporte.Name = "lblReporte";
-            this.lblReporte.Size = new System.Drawing.Size(56, 16);
+            this.lblReporte.Size = new System.Drawing.Size(63, 16);
             this.lblReporte.TabIndex = 1;
             this.lblReporte.Text = "Reporte";
             // 
@@ -64,9 +65,10 @@ namespace GestionVentas.Formularios
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
+            this.lblProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.Location = new System.Drawing.Point(430, 63);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(61, 16);
+            this.lblProducto.Size = new System.Drawing.Size(69, 16);
             this.lblProducto.TabIndex = 3;
             this.lblProducto.Text = "Producto";
             // 
@@ -82,12 +84,14 @@ namespace GestionVentas.Formularios
             // 
             // btnExportar
             // 
+            this.btnExportar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportar.Location = new System.Drawing.Point(820, 56);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(130, 30);
             this.btnExportar.TabIndex = 5;
             this.btnExportar.Text = "Exportar PDF";
-            this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.UseVisualStyleBackColor = false;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // lblLeyenda
@@ -124,6 +128,7 @@ namespace GestionVentas.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblReporte);
@@ -134,6 +139,8 @@ namespace GestionVentas.Formularios
             this.Controls.Add(this.lblLeyenda);
             this.Controls.Add(this.lblResumen);
             this.Controls.Add(this.dgvReporte);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmReportes";
             this.Text = "Reportes";
             this.Load += new System.EventHandler(this.frmReportes_Load);

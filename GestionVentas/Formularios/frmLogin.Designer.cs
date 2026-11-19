@@ -25,74 +25,80 @@ namespace GestionVentas.Formularios
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            //
+            // 
             // lblTitulo
-            //
+            // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.Location = new System.Drawing.Point(95, 20);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(240, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(208, 26);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Gestion de Ventas";
-            //
+            // 
             // lblUsuario
-            //
+            // 
             this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(30, 75);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(55, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(61, 16);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario";
-            //
+            // 
             // txtUsuario
-            //
+            // 
             this.txtUsuario.Location = new System.Drawing.Point(110, 72);
             this.txtUsuario.MaxLength = 50;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(210, 22);
             this.txtUsuario.TabIndex = 2;
-            //
+            // 
             // lblClave
-            //
+            // 
             this.lblClave.AutoSize = true;
+            this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClave.Location = new System.Drawing.Point(30, 115);
             this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(44, 17);
+            this.lblClave.Size = new System.Drawing.Size(47, 16);
             this.lblClave.TabIndex = 3;
             this.lblClave.Text = "Clave";
-            //
+            // 
             // txtClave
-            //
+            // 
             this.txtClave.Location = new System.Drawing.Point(110, 112);
             this.txtClave.MaxLength = 50;
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(210, 22);
             this.txtClave.TabIndex = 4;
             this.txtClave.UseSystemPasswordChar = true;
-            //
+            // 
             // btnIngresar
-            //
+            // 
+            this.btnIngresar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.Location = new System.Drawing.Point(110, 160);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(100, 32);
             this.btnIngresar.TabIndex = 5;
             this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
-            //
+            // 
             // btnSalir
-            //
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.LightBlue;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(220, 160);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 32);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            //
+            // 
             // frmLogin
-            //
+            // 
             this.AcceptButton = this.btnIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -113,6 +119,7 @@ namespace GestionVentas.Formularios
             this.Text = "Gestion de Ventas - Acceso";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

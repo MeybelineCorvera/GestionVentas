@@ -34,123 +34,133 @@ namespace GestionVentas.Formularios
             this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
             this.SuspendLayout();
-            //
+            // 
             // lblTitulo
-            //
+            // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.Location = new System.Drawing.Point(20, 15);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(60, 17);
+            this.lblTitulo.Size = new System.Drawing.Size(156, 29);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Nueva venta";
-            //
+            // 
             // lblCliente
-            //
+            // 
             this.lblCliente.AutoSize = true;
+            this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCliente.Location = new System.Drawing.Point(20, 73);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(60, 17);
+            this.lblCliente.Size = new System.Drawing.Size(55, 16);
             this.lblCliente.TabIndex = 1;
             this.lblCliente.Text = "Cliente";
-            //
+            // 
             // cboCliente
-            //
-            this.cboCliente.Location = new System.Drawing.Point(110, 70);
+            // 
             this.cboCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCliente.FormattingEnabled = true;
+            this.cboCliente.Location = new System.Drawing.Point(110, 70);
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(330, 24);
             this.cboCliente.TabIndex = 2;
-            //
+            // 
             // lblEmpleado
-            //
+            // 
             this.lblEmpleado.AutoSize = true;
+            this.lblEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmpleado.Location = new System.Drawing.Point(20, 113);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(60, 17);
+            this.lblEmpleado.Size = new System.Drawing.Size(78, 16);
             this.lblEmpleado.TabIndex = 3;
             this.lblEmpleado.Text = "Empleado";
-            //
+            // 
             // lblEmpleadoValor
-            //
+            // 
             this.lblEmpleadoValor.AutoSize = true;
             this.lblEmpleadoValor.Location = new System.Drawing.Point(110, 113);
             this.lblEmpleadoValor.Name = "lblEmpleadoValor";
-            this.lblEmpleadoValor.Size = new System.Drawing.Size(60, 17);
+            this.lblEmpleadoValor.Size = new System.Drawing.Size(0, 16);
             this.lblEmpleadoValor.TabIndex = 4;
-            this.lblEmpleadoValor.Text = "";
-            //
+            // 
             // lblProducto
-            //
+            // 
             this.lblProducto.AutoSize = true;
+            this.lblProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.Location = new System.Drawing.Point(20, 153);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(60, 17);
+            this.lblProducto.Size = new System.Drawing.Size(69, 16);
             this.lblProducto.TabIndex = 5;
             this.lblProducto.Text = "Producto";
-            //
+            // 
             // cboProducto
-            //
-            this.cboProducto.Location = new System.Drawing.Point(110, 150);
+            // 
             this.cboProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProducto.FormattingEnabled = true;
+            this.cboProducto.Location = new System.Drawing.Point(110, 150);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(330, 24);
             this.cboProducto.TabIndex = 6;
-            //
+            // 
             // lblCantidad
-            //
+            // 
             this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.Location = new System.Drawing.Point(20, 193);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(60, 17);
+            this.lblCantidad.Size = new System.Drawing.Size(69, 16);
             this.lblCantidad.TabIndex = 7;
             this.lblCantidad.Text = "Cantidad";
-            //
+            // 
             // txtCantidad
-            //
+            // 
             this.txtCantidad.Location = new System.Drawing.Point(110, 190);
             this.txtCantidad.MaxLength = 4;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(80, 22);
             this.txtCantidad.TabIndex = 8;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
-            //
+            // 
             // btnAgregar
-            //
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(110, 235);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(120, 34);
             this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            //
+            // 
             // btnGuardar
-            //
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(110, 440);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(150, 34);
             this.btnGuardar.TabIndex = 10;
             this.btnGuardar.Text = "Registrar venta";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            //
+            // 
             // btnCancelar
-            //
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(270, 440);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 34);
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            //
+            // 
             // dgvCarrito
-            //
-            this.dgvCarrito.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            // 
+            this.dgvCarrito.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarrito.Location = new System.Drawing.Point(470, 70);
@@ -159,31 +169,34 @@ namespace GestionVentas.Formularios
             this.dgvCarrito.RowTemplate.Height = 24;
             this.dgvCarrito.Size = new System.Drawing.Size(410, 340);
             this.dgvCarrito.TabIndex = 12;
-            //
+            // 
             // btnQuitar
-            //
+            // 
+            this.btnQuitar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitar.Location = new System.Drawing.Point(470, 420);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(100, 34);
             this.btnQuitar.TabIndex = 13;
             this.btnQuitar.Text = "Quitar";
-            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.UseVisualStyleBackColor = false;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
-            //
+            // 
             // lblTotal
-            //
+            // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblTotal.Location = new System.Drawing.Point(600, 428);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(60, 17);
+            this.lblTotal.Size = new System.Drawing.Size(150, 29);
             this.lblTotal.TabIndex = 14;
             this.lblTotal.Text = "Total: $0.00";
-            //
+            // 
             // frmNuevaVenta
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Azure;
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(900, 520);
             this.Controls.Add(this.lblTitulo);
@@ -211,6 +224,7 @@ namespace GestionVentas.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
