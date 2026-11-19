@@ -89,27 +89,5 @@ namespace GestionVentas.Repositorios
                         PrecioUnitario = d.PrecioUnitario
                     }).ToList();
         }
-
-        //Reporte de productos vendidos: unidades y monto acumulado por producto.
-        //idProducto = 0 -> todos (solo los que tienen ventas); otro valor -> ese producto.
-        public List<ProductoVendido> ProductosVendidos(int idProducto = 0)
-        {
-            List<DetalleVenta> detalles = new DetalleVentaRepositorio().ObtenerTodos();
-
-            return (from p in new ProductoRepositorio().ObtenerTodos()
-                    where idProducto == 0 || p.IdProducto == idProducto
-                    join d in detalles on p.IdProducto equals d.IdProducto into gd
-                    let cantidad = gd.Sum(x => x.Cantidad)
-                    where idProducto != 0 || cantidad > 0
-                    orderby gd.Sum(x => x.Cantidad * x.PrecioUnitario) descending
-                    select new ProductoVendido
-                    {
-                        IdProducto = p.IdProducto,
-                        Producto = p.Nombre,
-                        Marca = p.Marca,
-                        CantidadVendida = cantidad,
-                        MontoAcumulado = gd.Sum(x => x.Cantidad * x.PrecioUnitario)
-                    }).ToList();
-        }
     }
 }

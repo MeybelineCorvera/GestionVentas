@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using GestionVentas.Reportes;
 using System.Drawing;
 using System.Linq;
 using System.Diagnostics;
@@ -9,8 +10,8 @@ using GestionVentas.Repositorios;
 
 namespace GestionVentas.Formularios
 {
-    // (a) Productos vendidos: cantidades y montos acumulados
-    // (b) Stock de inventario con semaforo (bonus). Ambos se pueden filtrar por UN producto o ver todos.
+    //-Productos vendidos: cantidades y montos acumulados
+    //-Stock de inventario con semaforo (bonus). Ambos se pueden filtrar por UN producto o ver todos.
     public partial class frmReportes : Form
     {
         private bool cargando = true;   //evita generar el reporte mientras se llenan los combos
@@ -69,10 +70,10 @@ namespace GestionVentas.Formularios
             }
         }
 
-        // (a) Resumen de productos vendidos
+        //Resumen de productos vendidos
         private void ReporteVendidos(int idProducto)
         {
-            List<ProductoVendido> lista = new VentaRepositorio().ProductosVendidos(idProducto);
+            List<ProductoVendido> lista = new RepositorioReporteVentas().ObtenerProductosVendidos(idProducto);
             dgvReporte.DataSource = lista;
 
             dgvReporte.Columns["IdProducto"].Visible = false;
@@ -87,10 +88,10 @@ namespace GestionVentas.Formularios
                               "   |   Monto total: " + lista.Sum(x => x.MontoAcumulado).ToString("C2");
         }
 
-        //(b) Stock de inventario con semaforo
+        //Stock de inventario con semaforo
         private void ReporteStock(int idProducto)
         {
-            List<StockItem> lista = new ProductoRepositorio().ObtenerStock(idProducto);
+            List<StockItem> lista = new RepositorioReporteVentas().ObtenerStock(idProducto);
             dgvReporte.DataSource = lista;
 
             dgvReporte.Columns["IdProducto"].Visible = false;
@@ -146,30 +147,14 @@ namespace GestionVentas.Formularios
 
                 try
                 {
-                    //Solo las columnas visibles de la grilla
-                    List<DataGridViewColumn> columnas = dgvReporte.Columns.Cast<DataGridViewColumn>()
-                        .Where(c => c.Visible).ToList();
+                    string generadoPor = Sesion.Actual.NombreCompleto;
 
-                    List<string> encabezados = columnas.Select(c => c.HeaderText).ToList();
-                    List<double> anchos = columnas.Select(c => (double)c.Width).ToList();
-                    List<bool> derecha = columnas.Select(c => c.ValueType == typeof(decimal) || c.ValueType == typeof(int)).ToList();
-
-                    List<string[]> filas = new List<string[]>();
-                    List<int> colores = new List<int>();
-                    foreach (DataGridViewRow fila in dgvReporte.Rows)
-                    {
-                        filas.Add(columnas.Select(c => fila.Cells[c.Index].FormattedValue == null
-                            ? "" : fila.Cells[c.Index].FormattedValue.ToString()).ToArray());
-
-                        //Mismo semaforo que se ve en pantalla: 1 = rojo, 2 = ambar
-                        StockItem item = fila.DataBoundItem as StockItem;
-                        colores.Add(item == null ? 0 : (item.Stock <= 5 ? 1 : (item.Stock <= 10 ? 2 : 0)));
-                    }
-
-                    string detalle = "Filtro: " + cboProducto.Text + "   |   " + lblResumen.Text +
-                                     "   |   Generado por: " + Sesion.Actual.NombreCompleto;
-
-                    ReportePdf.Generar(dlg.FileName, cboReporte.Text, detalle, encabezados, anchos, derecha, filas, colores);
+                    if (cboReporte.SelectedIndex == 0)
+                        ReporteProductosVendidosPdf.Exportar(dlg.FileName,
+                            (List<ProductoVendido>)dgvReporte.DataSource, cboProducto.Text, generadoPor);
+                    else
+                        ReporteStockPdf.Exportar(dlg.FileName,
+                            (List<StockItem>)dgvReporte.DataSource, cboProducto.Text, generadoPor);
 
                     DialogResult abrir = MessageBox.Show("Reporte generado correctamente.\n\nDesea abrirlo ahora?",
                         "Gestion de Ventas", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -182,5 +167,6 @@ namespace GestionVentas.Formularios
                 }
             }
         }
+
     }
 }
